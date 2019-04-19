@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(215, 235, 190);
+}
+h2{
+    padding-top: 70px;
+    color:violet;
+    text-align: center;
+}
+
+h5{
+    color:lightseagreen;
+    text-align: center;
+}
+.button{
+    size: 200%;
+}
