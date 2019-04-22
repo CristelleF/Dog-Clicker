@@ -91,22 +91,26 @@ const dog5=new dog("The Migos" ,"img/migos.jpg" );
    //construct dog list
    const ul= document.createElement("ul");
    ul.className="list-group";
+
    for(dog of dogs){
        const li=document.createElement("li");
        li.className="list-group-item";
        li.textContent=dog.name;
     li.addEventListener("click",()=>{
         displayDog(dog);
-    });
+    })
 
-       ul.appendChild(li);
-
-      
+       ul.appendChild(li);  
    }
-   const displayDog=(dog)=>{
-    const rightColumn=document.querySelector(".col-8");
-    //Clear the display area
-      rightColumn.innerHTML="";
+
+   leftColumn.appendChild(ul);
+
+const displayDog=(dog)=>{
+const rightColumn=document.querySelector(".col-8");
+
+//Clear the display area
+ rightColumn.innerHTML="";
+
 //display the dog that I clicked
 const h1=document.createElement("h1");
 h1.textContent=dog.name;
@@ -123,5 +127,6 @@ rightColumn.appendChild(img);
 
 const h2=document.createElement("h2");
 h2.textContent=`clicks:${dog.clicks}`;
-rightColumn.appendChild(h2);
-   }
+//h2.textContent="Clicks: " + dog.clicks;
+rightColumn.appendChild(h2); 
+}
