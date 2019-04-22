@@ -1,4 +1,6 @@
 body{
+    padding-top:75px;
+    padding-bottom:75px;
     background-color: rgb(215, 235, 190);
 }
 h2{
