@@ -5,21 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="style.css">
     <title>Dog Clicker</title>
 </head>
 <h2>Hi there...</h2>
 <br>
 <h5>Click me if you think I'm cute..xoxo</h5>
-<body>
+<body> <br>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-8"></div>
+            <div class="col-3">
+             <ul id="dogs" class="list-group">
+             </ul>
+             <br>
+             <button onclick="view.showAdmin()" class="btn btn-primary">Admin</button>
+            </div>
+            <div id="display" class="col-5">
+
+            </div>
+            <div id="admin" class="col-4">
+                <h1>Edit Dog</h1>
+                <form id="form">
+                    <div class="form-group">
+                        <label for="name">Dog Name</label>
+                        <input onkeyup="view.nameChange(this.value)" id="name"
+                        type="text" class="form-control"
+                        placeholder="Enter Dog Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Dog Image Source</label>
+                        <input onkeyup="view.imageChange(this.value)" id="image"
+                        type="text" class="form-control"
+                        placeholder="http://...">
+                    </div>
+                    <div class="form-group">
+                        <label for="clicks">Number of Clicks</label>
+                        <input onkeyup="view.clicksChange(this.value)" id="click"
+                        type="number" class="form-control"
+                        placeholder="# of clicks...">
+                    </div>
+                    <button class="btn btn-success" type="submit">Submit</button>
+                    <button onclick="view.hideAdmin()" class="btn btn-danger"
+                    type="button">Cancel</button>
+                </form>
+            </div>
         </div>
    </div>
-   
-<script src="main.js"></script>    
+   <script src="main.js"></script>    
 </body>
 </html>
 
